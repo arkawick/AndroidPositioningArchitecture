@@ -1,0 +1,182 @@
+<mxfile host="app.diagrams.net" modified="2025-12-28T00:00:00.000Z" agent="Claude Code" version="24.0.0">
+  <diagram name="SUPL Architecture" id="supl-arch">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="SUPL Architecture Overview" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="30" width="400" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- SET (SUPL Enabled Terminal) -->
+        <mxCell id="set-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="150" width="200" height="400" as="geometry" />
+        </mxCell>
+
+        <mxCell id="set-title" value="SET&lt;br&gt;(SUPL Enabled Terminal)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="200" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- SET Components -->
+        <mxCell id="set-supl-client" value="SUPL Client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="110" y="220" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="set-positioning" value="Positioning Engine&lt;br&gt;(GPS/GNSS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="110" y="280" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="set-protocols" value="Positioning Protocols&lt;br&gt;(RRLP/RRC/TIA-801/LPP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="110" y="350" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="set-ip" value="IP Connectivity&lt;br&gt;(TCP/TLS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="110" y="420" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="set-app" value="Location-Based Applications" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="110" y="490" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- SLP (SUPL Location Platform) -->
+        <mxCell id="slp-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="500" y="150" width="600" height="400" as="geometry" />
+        </mxCell>
+
+        <mxCell id="slp-title" value="SLP (SUPL Location Platform)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="500" y="160" width="600" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- SLC (SUPL Location Center) -->
+        <mxCell id="slc-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="530" y="210" width="250" height="300" as="geometry" />
+        </mxCell>
+
+        <mxCell id="slc-title" value="SLC&lt;br&gt;(SUPL Location Center)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="530" y="220" width="250" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="slc-session" value="Session Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffd966;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="560" y="280" width="190" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="slc-auth" value="Authentication &amp; Security&lt;br&gt;(TLS, GBA, PSK)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffd966;strokeColor=#d6b656;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="560" y="330" width="190" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="slc-roaming" value="Roaming Support" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffd966;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="560" y="385" width="190" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="slc-interface" value="Client Interface (ULP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffd966;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="560" y="435" width="190" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- SPC (SUPL Positioning Center) -->
+        <mxCell id="spc-container" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="820" y="210" width="250" height="300" as="geometry" />
+        </mxCell>
+
+        <mxCell id="spc-title" value="SPC&lt;br&gt;(SUPL Positioning Center)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="820" y="220" width="250" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="spc-calc" value="Position Calculation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b9e0a5;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="850" y="280" width="190" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="spc-assistance" value="Assistance Data&lt;br&gt;(Ephemeris, Almanac, LTO)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b9e0a5;strokeColor=#82b366;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="850" y="330" width="190" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="spc-protocols" value="Positioning Protocols&lt;br&gt;(RRLP, RRC, TIA-801, LPP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b9e0a5;strokeColor=#82b366;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="850" y="385" width="190" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="spc-ref" value="Reference Network&lt;br&gt;(WWRN Interface)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b9e0a5;strokeColor=#82b366;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="850" y="440" width="190" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- LCS Client -->
+        <mxCell id="lcs-client" value="LCS Client&lt;br&gt;(Location Services Applications)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="540" y="620" width="230" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Connections -->
+        <!-- SET to SLC (ULP) -->
+        <mxCell id="ulp-connection" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=3;strokeColor=#0066CC;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="set-ip" target="slc-interface">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="450" as="sourcePoint" />
+            <mxPoint x="450" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="ulp-label" value="ULP&lt;br&gt;(UserPlane Location Protocol)&lt;br&gt;over TCP/TLS" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fillColor=#ffffff;strokeColor=#0066CC;rounded=1;" vertex="1" connectable="0" parent="ulp-connection">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="10" y="-32" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- SLC to SPC (ILP) -->
+        <mxCell id="ilp-connection" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#CC6600;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="slc-container" target="spc-container">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="400" as="sourcePoint" />
+            <mxPoint x="750" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="ilp-label" value="ILP&lt;br&gt;(Internal Location Protocol)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fillColor=#ffffff;strokeColor=#CC6600;rounded=1;" vertex="1" connectable="0" parent="ilp-connection">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- LCS Client to SLC (MLP) -->
+        <mxCell id="mlp-connection" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#009900;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="lcs-client" target="slc-container">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="600" as="sourcePoint" />
+            <mxPoint x="650" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="mlp-label" value="MLP&lt;br&gt;(Mobile Location Protocol)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fillColor=#ffffff;strokeColor=#009900;rounded=1;" vertex="1" connectable="0" parent="mlp-connection">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="80" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="620" width="380" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-title" value="Legend" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="630" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-ulp" value="ULP: Communication between SET and SLP" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="90" y="660" width="360" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-ilp" value="ILP: Internal protocol between SLC and SPC" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="90" y="680" width="360" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-mlp" value="MLP: Interface for location service applications" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="90" y="700" width="360" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-modes" value="Operating Modes: Proxy (network-initiated) &amp; Non-Proxy (SET-initiated)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="90" y="720" width="360" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="legend-security" value="Security: TLS encryption, GBA or PSK authentication" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="90" y="740" width="360" height="15" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,267 @@
+<mxfile host="app.diagrams.net" modified="2025-12-28T00:00:00.000Z" agent="Claude Code" version="24.0.0">
+  <diagram name="SUPL INIT Process" id="supl-init">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="SUPL INIT - Network Initiated Positioning (Proxy Mode)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="200" y="30" width="700" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Actors/Systems -->
+        <!-- LCS Client -->
+        <mxCell id="lcs-box" value="LCS Client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lcs-line" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;strokeColor=#b85450;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="150" as="sourcePoint" />
+            <mxPoint x="140" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- SLC -->
+        <mxCell id="slc-box" value="SLC&lt;br&gt;(SUPL Location Center)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="280" y="100" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="slc-line" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;strokeColor=#d79b00;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="150" as="sourcePoint" />
+            <mxPoint x="360" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- SET -->
+        <mxCell id="set-box" value="SET&lt;br&gt;(Mobile Device)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="560" y="100" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="set-line" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;strokeColor=#6c8ebf;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="150" as="sourcePoint" />
+            <mxPoint x="630" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- SPC -->
+        <mxCell id="spc-box" value="SPC&lt;br&gt;(Positioning Center)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="820" y="100" width="160" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="spc-line" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;strokeColor=#82b366;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="150" as="sourcePoint" />
+            <mxPoint x="900" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Message Flows -->
+
+        <!-- 1. MLP SLIR -->
+        <mxCell id="msg1-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#009900;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="190" as="sourcePoint" />
+            <mxPoint x="360" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg1-label" value="1. MLP SLIR&lt;br&gt;(Location Request)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg1-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 2. SUPL INIT -->
+        <mxCell id="msg2-arrow" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#0066CC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="230" as="sourcePoint" />
+            <mxPoint x="630" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg2-label" value="2. SUPL INIT&lt;br&gt;(Session ID, SLP Address, Positioning Method)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#ffffcc;strokeColor=#0066CC;rounded=1;" vertex="1" connectable="0" parent="msg2-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 3. SET Processing -->
+        <mxCell id="msg3-box" value="SET processes INIT&lt;br&gt;Establishes data connection if needed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="650" y="260" width="200" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 4. TCP/TLS Connection -->
+        <mxCell id="msg4-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CC00CC;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="320" as="sourcePoint" />
+            <mxPoint x="360" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg4-label" value="3. TCP/TLS Connection Setup" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg4-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 5. SUPL POS INIT -->
+        <mxCell id="msg5-arrow" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#0066CC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="360" as="sourcePoint" />
+            <mxPoint x="360" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg5-label" value="4. SUPL POS INIT&lt;br&gt;(Capabilities, Location ID)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#ffffcc;strokeColor=#0066CC;rounded=1;" vertex="1" connectable="0" parent="msg5-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="-5" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 6. ILP to SPC -->
+        <mxCell id="msg6-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CC6600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="400" as="sourcePoint" />
+            <mxPoint x="900" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg6-label" value="5. ILP (Position Request)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg6-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 7. SUPL POS (Multiple exchanges) -->
+        <mxCell id="pos-session-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff4e6;strokeColor=#FF9900;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="430" width="600" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="pos-session-label" value="POSITIONING SESSION (Multiple SUPL POS exchanges)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="435" width="600" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="msg7-arrow1" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#FF6600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="470" as="sourcePoint" />
+            <mxPoint x="630" y="470" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg7-label1" value="6a. SUPL POS (Assistance Data)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg7-arrow1">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg7-arrow2" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#FF6600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="500" as="sourcePoint" />
+            <mxPoint x="900" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg7-label2" value="6b. SUPL POS (Measurements)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg7-arrow2">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg7-note" value="RRLP/RRC/TIA-801/LPP protocol encapsulated in SUPL POS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="650" y="510" width="240" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- 8. Position Calculation -->
+        <mxCell id="msg8-box" value="Position Calculation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=10;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="920" y="520" width="140" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- 9. ILP Response -->
+        <mxCell id="msg9-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CC6600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="570" as="sourcePoint" />
+            <mxPoint x="360" y="570" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg9-label" value="7. ILP (Position Response)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg9-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 10. SUPL END -->
+        <mxCell id="msg10-arrow" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#0066CC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="610" as="sourcePoint" />
+            <mxPoint x="630" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg10-label" value="8. SUPL END&lt;br&gt;(Position, Status Code)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#ffffcc;strokeColor=#0066CC;rounded=1;" vertex="1" connectable="0" parent="msg10-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 11. Connection Teardown -->
+        <mxCell id="msg11-arrow" value="" style="endArrow=none;html=1;strokeWidth=2;strokeColor=#CC00CC;dashed=1;endFill=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="645" as="sourcePoint" />
+            <mxPoint x="360" y="645" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg11-label" value="9. Connection Teardown" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg11-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 12. MLP SLIA -->
+        <mxCell id="msg12-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#009900;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="680" as="sourcePoint" />
+            <mxPoint x="140" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg12-label" value="10. MLP SLIA&lt;br&gt;(Location Response)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg12-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="-5" y="-20" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Notes -->
+        <mxCell id="notes-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="770" width="900" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notes-title" value="Key Points:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="90" y="775" width="100" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notes1" value="• SUPL INIT can be sent via SMS or IP (if SET has data connection)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="90" y="800" width="850" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notes2" value="• Positioning session uses RRLP (GSM), RRC (UMTS), TIA-801 (CDMA), or LPP (LTE) encapsulated in SUPL POS messages" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="90" y="820" width="850" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notes3" value="• SET can be in SET-Assisted mode (sends measurements to SPC) or SET-Based mode (calculates position locally)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="90" y="840" width="850" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="notes4" value="• TLS provides encryption and authentication between SET and SLC" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="90" y="860" width="850" height="15" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

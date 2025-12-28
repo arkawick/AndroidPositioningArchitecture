@@ -1,0 +1,349 @@
+<mxfile host="app.diagrams.net" modified="2025-12-28T00:00:00.000Z" agent="Claude Code" version="24.0.0">
+  <diagram name="Location Determination" id="location-determination">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="How Location Is Determined Through SUPL" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="700" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="subtitle" value="AGPS: Assisted GPS Location Determination" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="350" y="60" width="700" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- GPS Satellites -->
+        <mxCell id="sat-region" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F5FF;strokeColor=#0066CC;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="110" width="320" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sat-label" value="GPS Satellite Constellation" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="115" width="320" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sat1" value="🛰 GPS SV 12" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCE5FF;strokeColor=#0066CC;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="60" y="150" width="100" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sat2" value="🛰 GPS SV 25" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCE5FF;strokeColor=#0066CC;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="180" y="150" width="100" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sat3" value="🛰 GPS SV 6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCE5FF;strokeColor=#0066CC;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="60" y="200" width="100" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sat4" value="🛰 GPS SV 29" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CCE5FF;strokeColor=#0066CC;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="180" y="200" width="100" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="sat-note" value="Transmit: Ephemeris, Almanac, Time&lt;br&gt;(Slow: 30-60 seconds)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="60" y="245" width="220" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- WWRN Reference Network -->
+        <mxCell id="wwrn-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4E6;strokeColor=#FF9900;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="420" y="110" width="200" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="wwrn-label" value="WWRN&lt;br&gt;Reference Network" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="420" y="120" width="200" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="wwrn-stations" value="🗼 Global GPS&lt;br&gt;Reference Stations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6B3;strokeColor=#FF9900;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="445" y="170" width="150" height="45" as="geometry" />
+        </mxCell>
+
+        <mxCell id="wwrn-function" value="Monitors satellites 24/7&lt;br&gt;Generates assistance data&lt;br&gt;Creates LTO predictions" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="445" y="230" width="150" height="45" as="geometry" />
+        </mxCell>
+
+        <!-- Satellites to WWRN -->
+        <mxCell id="sat-wwrn-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#0066CC;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="190" as="sourcePoint" />
+            <mxPoint x="420" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="sat-wwrn-label" value="GPS Signals" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="sat-wwrn-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- SPC (SUPL Positioning Center) -->
+        <mxCell id="spc-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="680" y="110" width="280" height="180" as="geometry" />
+        </mxCell>
+
+        <mxCell id="spc-label" value="SPC&lt;br&gt;(SUPL Positioning Center)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=13;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="680" y="120" width="280" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="spc-assist" value="Assistance Data Generation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b9e0a5;strokeColor=#82b366;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="710" y="170" width="220" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="spc-calc" value="Position Calculation&lt;br&gt;(SET-Assisted mode)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b9e0a5;strokeColor=#82b366;fontSize=10;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="710" y="215" width="220" height="35" as="geometry" />
+        </mxCell>
+
+        <mxCell id="spc-data" value="• Ephemeris/Almanac&lt;br&gt;• Reference Time/Location&lt;br&gt;• Ionospheric Model&lt;br&gt;• Acquisition Assistance" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="710" y="255" width="220" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- WWRN to SPC -->
+        <mxCell id="wwrn-spc-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#FF9900;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="190" as="sourcePoint" />
+            <mxPoint x="680" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="wwrn-spc-label" value="Assistance&lt;br&gt;Data" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="wwrn-spc-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Main Process Flow -->
+        <mxCell id="process-title" value="LOCATION DETERMINATION PROCESS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="320" width="920" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Two parallel flows -->
+        <!-- SET-Assisted Flow -->
+        <mxCell id="assisted-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0F0;strokeColor=#CC0000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="40" y="370" width="450" height="580" as="geometry" />
+        </mxCell>
+
+        <mxCell id="assisted-title" value="METHOD 1: SET-ASSISTED (MS-Assisted)&lt;br&gt;Device Measures → Network Calculates" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#FFCCCC;" vertex="1" parent="1">
+          <mxGeometry x="40" y="375" width="450" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Step 1 -->
+        <mxCell id="assist1" value="STEP 1: Session Setup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#CC0000;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="60" y="425" width="410" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="assist1-detail" value="• SUPL INIT/START initiates session&lt;br&gt;• SET reports capabilities to SLC/SPC&lt;br&gt;• SET requests assistance data" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="70" y="460" width="390" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Step 2 -->
+        <mxCell id="assist2" value="STEP 2: SPC → SET: Assistance Data via SUPL POS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#CC0000;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="60" y="505" width="410" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="assist2-detail" value="📦 Assistance Data Package:&lt;br&gt;✓ Ephemeris (satellite orbits) - precise, valid 4 hrs&lt;br&gt;✓ Almanac (constellation) - coarse, valid 6 months&lt;br&gt;✓ Reference Time (GPS time, accurate to µs)&lt;br&gt;✓ Reference Location (approx. position from cell tower)&lt;br&gt;✓ Ionospheric Model (signal delay corrections)&lt;br&gt;✓ Acquisition Assistance (Doppler, code phase, search window)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="70" y="540" width="390" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- Step 3 -->
+        <mxCell id="assist3" value="STEP 3: SET GPS Receiver - Signal Acquisition" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#CC0000;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="60" y="625" width="410" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="assist3-detail" value="SET uses assistance data to acquire satellites (5-10 seconds):&lt;br&gt;✓ Knows which satellites are visible&lt;br&gt;✓ Knows expected signal frequency (Doppler)&lt;br&gt;✓ Knows code phase - where to search in signal&lt;br&gt;✓ Has accurate time reference&lt;br&gt;&lt;br&gt;SET locks onto 4+ satellites and measures:&lt;br&gt;• Pseudorange (distance to each satellite)&lt;br&gt;• Doppler shift (satellite velocity)&lt;br&gt;• Signal strength (C/N0: 35-45 dB-Hz)&lt;br&gt;• Carrier phase" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="70" y="660" width="390" height="105" as="geometry" />
+        </mxCell>
+
+        <!-- Step 4 -->
+        <mxCell id="assist4" value="STEP 4: SET → SPC: GPS Measurements via SUPL POS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#CC0000;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="60" y="775" width="410" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="assist4-detail" value="SET sends raw measurements for each satellite:&lt;br&gt;• Pseudorange: ~20,000 km ± error&lt;br&gt;• Doppler: ±5 kHz&lt;br&gt;• Measurement timestamp&lt;br&gt;• Signal quality (C/N0)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="70" y="810" width="390" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Step 5 -->
+        <mxCell id="assist5" value="STEP 5: SPC - Position Calculation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#CC0000;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="60" y="870" width="410" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="assist5-detail" value="🧮 SPC calculates position:&lt;br&gt;1. Validate measurements (quality check)&lt;br&gt;2. Apply corrections (satellite clock, ionosphere, troposphere)&lt;br&gt;3. Calculate satellite positions from ephemeris&lt;br&gt;4. Solve navigation equations (trilateration):&lt;br&gt;   4 unknowns: Latitude, Longitude, Altitude, Clock Bias&lt;br&gt;   4+ equations from satellite measurements&lt;br&gt;5. Use least squares or Kalman filter&lt;br&gt;6. Calculate accuracy (HDOP, VDOP)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="70" y="905" width="390" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Based Flow -->
+        <mxCell id="based-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F0FF;strokeColor=#0000CC;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="530" y="370" width="450" height="580" as="geometry" />
+        </mxCell>
+
+        <mxCell id="based-title" value="METHOD 2: SET-BASED (MS-Based)&lt;br&gt;Device Measures → Device Calculates" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fillColor=#CCCCFF;" vertex="1" parent="1">
+          <mxGeometry x="530" y="375" width="450" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Step 1 -->
+        <mxCell id="based1" value="STEP 1: Session Setup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6FF;strokeColor=#0000CC;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="550" y="425" width="410" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="based1-detail" value="• SET initiates with SUPL START&lt;br&gt;• Requests assistance data for local calculation&lt;br&gt;• Specifies SET-Based mode capability" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="560" y="460" width="390" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Step 2 -->
+        <mxCell id="based2" value="STEP 2: SPC → SET: Complete Assistance Data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6FF;strokeColor=#0000CC;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="550" y="505" width="410" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="based2-detail" value="📦 Complete Assistance Package for Local Calculation:&lt;br&gt;✓ Full ephemeris for all visible satellites&lt;br&gt;✓ Complete almanac for constellation&lt;br&gt;✓ Reference Time (GPS time)&lt;br&gt;✓ Ionospheric model parameters&lt;br&gt;✓ UTC parameters&lt;br&gt;✓ Acquisition assistance&lt;br&gt;✓ Optional: LTO (7-14 day predictions)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="560" y="540" width="390" height="75" as="geometry" />
+        </mxCell>
+
+        <!-- Step 3 -->
+        <mxCell id="based3" value="STEP 3: SET GPS Receiver - Signal Acquisition" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6FF;strokeColor=#0000CC;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="550" y="625" width="410" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="based3-detail" value="Same as SET-Assisted:&lt;br&gt;✓ Fast satellite acquisition (5-10 seconds)&lt;br&gt;✓ Acquires 4+ satellites&lt;br&gt;✓ Measures pseudorange, Doppler, signal strength&lt;br&gt;✓ Stores measurements locally" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="560" y="660" width="390" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Step 4 -->
+        <mxCell id="based4" value="STEP 4: SET - LOCAL Position Calculation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6FF;strokeColor=#0000CC;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="550" y="720" width="410" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="based4-detail" value="🧮 SET calculates position LOCALLY:&lt;br&gt;1. Uses ephemeris to calculate satellite positions&lt;br&gt;2. Applies ionospheric corrections&lt;br&gt;3. Solves navigation equations on device:&lt;br&gt;   • Trilateration with 4+ satellites&lt;br&gt;   • Least squares solution&lt;br&gt;   • Local Kalman filtering&lt;br&gt;4. Calculates:&lt;br&gt;   • Latitude, Longitude, Altitude&lt;br&gt;   • Accuracy estimate (HDOP/VDOP)&lt;br&gt;   • Optional: Velocity, heading" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="560" y="755" width="390" height="105" as="geometry" />
+        </mxCell>
+
+        <!-- Step 5 -->
+        <mxCell id="based5" value="STEP 5: Position Available Locally" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6E6FF;strokeColor=#0000CC;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="550" y="870" width="410" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="based5-detail" value="✓ Position calculated on device&lt;br&gt;✓ Available immediately to applications&lt;br&gt;✓ Better privacy (network doesn't know location)&lt;br&gt;✓ Can work offline with cached assistance data&lt;br&gt;✓ Optional: Send position to SPC via SUPL END" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="560" y="905" width="390" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Final Result -->
+        <mxCell id="result-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6FFE6;strokeColor=#00CC00;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="40" y="980" width="940" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="result-title" value="📍 FINAL POSITION RESULT" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="990" width="940" height="25" as="geometry" />
+        </mxCell>
+
+        <mxCell id="result-data" value="Position Data Delivered:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="60" y="1020" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="result1" value="• Latitude: 37.7749° N" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="60" y="1045" width="220" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="result2" value="• Longitude: 122.4194° W" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="60" y="1060" width="220" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="result3" value="• Altitude: 52 meters" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="60" y="1075" width="220" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="result4" value="• Horizontal Accuracy: ±5 meters (HDOP: 1.2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="310" y="1045" width="300" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="result5" value="• Vertical Accuracy: ±8 meters (VDOP: 1.8)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="310" y="1060" width="300" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="result6" value="• Timestamp: 2025-12-28 10:23:47 UTC" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="310" y="1075" width="300" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="result7" value="• Satellites Used: 8 (GPS: 6, GLONASS: 2)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="640" y="1045" width="320" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="result8" value="• Fix Type: 3D Fix" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="640" y="1060" width="320" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="result9" value="• Time To First Fix: 8 seconds (vs 45s standalone GPS)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="640" y="1075" width="320" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- Comparison Box -->
+        <mxCell id="compare-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF9E6;strokeColor=#FFB366;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="110" width="330" height="840" as="geometry" />
+        </mxCell>
+
+        <mxCell id="compare-title" value="KEY COMPARISONS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1030" y="120" width="330" height="25" as="geometry" />
+        </mxCell>
+
+        <!-- Comparison Tables -->
+        <mxCell id="table1-title" value="SET-Assisted vs SET-Based" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fillColor=#FFE6CC;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="155" width="290" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="table1" value="&lt;table border='1' style='width:100%; font-size:8px; border-collapse:collapse'&gt;&lt;tr&gt;&lt;th&gt;Aspect&lt;/th&gt;&lt;th&gt;SET-Assisted&lt;/th&gt;&lt;th&gt;SET-Based&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Calculation&lt;/td&gt;&lt;td&gt;Network (SPC)&lt;/td&gt;&lt;td&gt;Device (SET)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Privacy&lt;/td&gt;&lt;td&gt;Lower&lt;/td&gt;&lt;td&gt;Higher&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Accuracy&lt;/td&gt;&lt;td&gt;Better (5-8m)&lt;/td&gt;&lt;td&gt;Good (8-12m)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Network Need&lt;/td&gt;&lt;td&gt;Every fix&lt;/td&gt;&lt;td&gt;Initial only&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Device CPU&lt;/td&gt;&lt;td&gt;Low&lt;/td&gt;&lt;td&gt;Higher&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;GPS Receiver&lt;/td&gt;&lt;td&gt;Basic&lt;/td&gt;&lt;td&gt;Advanced&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Offline&lt;/td&gt;&lt;td&gt;No&lt;/td&gt;&lt;td&gt;Yes (with LTO)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;strokeColor=#FFB366;fillColor=#ffffff;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="180" width="290" height="130" as="geometry" />
+        </mxCell>
+
+        <mxCell id="table2-title" value="AGPS vs Standalone GPS" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fillColor=#FFE6CC;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="325" width="290" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="table2" value="&lt;table border='1' style='width:100%; font-size:8px; border-collapse:collapse'&gt;&lt;tr&gt;&lt;th&gt;Metric&lt;/th&gt;&lt;th&gt;Standalone GPS&lt;/th&gt;&lt;th&gt;SUPL AGPS&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;TTFF (Cold)&lt;/td&gt;&lt;td&gt;30-60 sec&lt;/td&gt;&lt;td&gt;5-10 sec&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;TTFF (Warm)&lt;/td&gt;&lt;td&gt;20-30 sec&lt;/td&gt;&lt;td&gt;3-5 sec&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;TTFF (Hot)&lt;/td&gt;&lt;td&gt;5-10 sec&lt;/td&gt;&lt;td&gt;1-3 sec&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Accuracy&lt;/td&gt;&lt;td&gt;10-30m&lt;/td&gt;&lt;td&gt;5-10m&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Indoor&lt;/td&gt;&lt;td&gt;Difficult&lt;/td&gt;&lt;td&gt;Better&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Power (fix)&lt;/td&gt;&lt;td&gt;4.5-12 Ws&lt;/td&gt;&lt;td&gt;0.75-2 Ws&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Data Download&lt;/td&gt;&lt;td&gt;From satellites&lt;/td&gt;&lt;td&gt;From network&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" style="text;html=1;strokeColor=#FFB366;fillColor=#ffffff;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="350" width="290" height="125" as="geometry" />
+        </mxCell>
+
+        <mxCell id="assist-title" value="Assistance Data Types" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fillColor=#FFE6CC;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="490" width="290" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="assist-data" value="📡 Ephemeris&lt;br&gt;• Precise satellite orbits&lt;br&gt;• Valid: 4 hours&lt;br&gt;• Size: 72 bytes/satellite&lt;br&gt;&lt;br&gt;📡 Almanac&lt;br&gt;• Coarse constellation data&lt;br&gt;• Valid: 6 months&lt;br&gt;• Size: 900 bytes total&lt;br&gt;&lt;br&gt;⏰ Reference Time&lt;br&gt;• Accurate GPS time&lt;br&gt;• ±1 microsecond&lt;br&gt;&lt;br&gt;📍 Reference Location&lt;br&gt;• Approximate position&lt;br&gt;• From cell tower&lt;br&gt;&lt;br&gt;🌐 Ionospheric Model&lt;br&gt;• Signal delay corrections&lt;br&gt;• Improves accuracy 10-20m&lt;br&gt;&lt;br&gt;🎯 Acquisition Assistance&lt;br&gt;• Expected Doppler shift&lt;br&gt;• Code phase&lt;br&gt;• Search window&lt;br&gt;&lt;br&gt;📅 LTO (Long Term Orbit)&lt;br&gt;• 7-14 day predictions&lt;br&gt;• Offline positioning&lt;br&gt;• Size: 1-2 MB" style="text;html=1;strokeColor=#FFB366;fillColor=#ffffff;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="1050" y="515" width="290" height="305" as="geometry" />
+        </mxCell>
+
+        <mxCell id="benefit-title" value="⚡ Key Benefits" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fillColor=#E6FFE6;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="835" width="290" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="benefits" value="✓ 10x Faster TTFF (5-10s vs 30-60s)&lt;br&gt;✓ 2x Better Accuracy (5-10m vs 10-30m)&lt;br&gt;✓ 90% Less Power for acquisition&lt;br&gt;✓ Works indoors &amp; urban canyons&lt;br&gt;✓ Multi-constellation (GPS+GLONASS+Galileo)&lt;br&gt;✓ Offline positioning with LTO&lt;br&gt;✓ Network provides real-time satellite data&lt;br&gt;✓ No 30-second satellite download wait" style="text;html=1;strokeColor=#00CC00;fillColor=#E6FFE6;align=left;verticalAlign=top;whiteSpace=wrap;rounded=1;fontSize=9" vertex="1" parent="1">
+          <mxGeometry x="1050" y="860" width="290" height="85" as="geometry" />
+        </mxCell>
+
+        <!-- Bottom Info -->
+        <mxCell id="info-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#999999;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="980" width="330" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="info-title" value="🔬 Technical Details" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1030" y="990" width="330" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="info1" value="Trilateration: Requires 4+ satellites" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="1050" y="1015" width="290" height="12" as="geometry" />
+        </mxCell>
+
+        <mxCell id="info2" value="Pseudorange: Distance = (Signal Travel Time) × (Speed of Light)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="1050" y="1030" width="290" height="12" as="geometry" />
+        </mxCell>
+
+        <mxCell id="info3" value="HDOP &lt; 2.5: Excellent geometry, ±5m accuracy" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="1050" y="1045" width="290" height="12" as="geometry" />
+        </mxCell>
+
+        <mxCell id="info4" value="Protocols: RRLP (GSM), RRC (UMTS), TIA-801 (CDMA), LPP (LTE)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="1050" y="1060" width="290" height="12" as="geometry" />
+        </mxCell>
+
+        <mxCell id="info5" value="Multi-GNSS: Can use GPS + GLONASS + Galileo + BeiDou" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8" vertex="1" parent="1">
+          <mxGeometry x="1050" y="1075" width="290" height="12" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

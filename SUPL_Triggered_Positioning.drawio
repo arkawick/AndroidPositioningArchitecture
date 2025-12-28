@@ -1,0 +1,350 @@
+<mxfile host="app.diagrams.net" modified="2025-12-28T00:00:00.000Z" agent="Claude Code" version="24.0.0">
+  <diagram name="SUPL Triggered Positioning" id="supl-triggered">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="SUPL 2.0 - Triggered Positioning" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=20;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="30" width="500" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="subtitle" value="Periodic and Area Event Triggered Location Reports" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="300" y="65" width="500" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Actors/Systems -->
+        <!-- LCS Client -->
+        <mxCell id="lcs-box" value="LCS Client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lcs-line" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;strokeColor=#b85450;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="170" as="sourcePoint" />
+            <mxPoint x="140" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- SLC -->
+        <mxCell id="slc-box" value="SLC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="320" y="120" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="slc-line" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;strokeColor=#d79b00;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="170" as="sourcePoint" />
+            <mxPoint x="380" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- SET -->
+        <mxCell id="set-box" value="SET" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="560" y="120" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="set-line" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;strokeColor=#6c8ebf;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="170" as="sourcePoint" />
+            <mxPoint x="620" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- SPC -->
+        <mxCell id="spc-box" value="SPC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12" vertex="1" parent="1">
+          <mxGeometry x="800" y="120" width="120" height="50" as="geometry" />
+        </mxCell>
+
+        <mxCell id="spc-line" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=2;strokeColor=#82b366;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="860" y="170" as="sourcePoint" />
+            <mxPoint x="860" y="820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Message Flows -->
+
+        <!-- Session Setup -->
+        <mxCell id="setup-label" value="SESSION SETUP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#CC0000;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="950" y="200" width="150" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- 1. MLP Request with Trigger -->
+        <mxCell id="msg1-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#009900;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="210" as="sourcePoint" />
+            <mxPoint x="380" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg1-label" value="1. MLP SLIR with Trigger Parameters&lt;br&gt;(Periodic/Area Event/Start Time)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg1-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 2. SUPL INIT (triggered) -->
+        <mxCell id="msg2-arrow" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#0066CC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="250" as="sourcePoint" />
+            <mxPoint x="620" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg2-label" value="2. SUPL INIT (Trigger Type, Parameters)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=1;fillColor=#ffffcc;strokeColor=#0066CC;rounded=1;" vertex="1" connectable="0" parent="msg2-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 3. Connection -->
+        <mxCell id="msg3-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#CC00CC;dashed=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="280" as="sourcePoint" />
+            <mxPoint x="380" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg3-label" value="3. TLS Connection" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg3-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 4. SUPL TRIGGERED START -->
+        <mxCell id="msg4-arrow" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#0066CC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="310" as="sourcePoint" />
+            <mxPoint x="380" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg4-label" value="4. SUPL TRIGGERED START (Accept/Reject)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=1;fillColor=#ffffcc;strokeColor=#0066CC;rounded=1;" vertex="1" connectable="0" parent="msg4-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="-5" y="-15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 5. SUPL TRIGGERED RESPONSE -->
+        <mxCell id="msg5-arrow" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#0066CC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="340" as="sourcePoint" />
+            <mxPoint x="620" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg5-label" value="5. SUPL TRIGGERED RESPONSE" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=1;fillColor=#ffffcc;strokeColor=#0066CC;rounded=1;" vertex="1" connectable="0" parent="msg5-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Triggered Reports Section -->
+        <mxCell id="reports-label" value="TRIGGERED LOCATION REPORTS (Multiple instances)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F3FF;strokeColor=#0066CC;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="950" y="380" width="150" height="40" as="geometry" />
+        </mxCell>
+
+        <mxCell id="trigger-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F9FF;strokeColor=#0099FF;strokeWidth=2;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="370" width="860" height="280" as="geometry" />
+        </mxCell>
+
+        <!-- First Report -->
+        <mxCell id="report1-label" value="Report #1 (Trigger Event Occurs)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#0066CC" vertex="1" parent="1">
+          <mxGeometry x="70" y="380" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="msg6-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#0066CC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="410" as="sourcePoint" />
+            <mxPoint x="380" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg6-label" value="SUPL TRIGGERED START" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg6-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg7-arrow" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#FF6600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="435" as="sourcePoint" />
+            <mxPoint x="860" y="435" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg7-label" value="SUPL POS (Positioning)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg7-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg8-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#0066CC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="460" as="sourcePoint" />
+            <mxPoint x="620" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg8-label" value="SUPL REPORT (Position)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg8-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg9-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#009900;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="485" as="sourcePoint" />
+            <mxPoint x="140" y="485" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg9-label" value="MLP SLIA (Location)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg9-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="-5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Wait Period -->
+        <mxCell id="wait-box" value="⏱ Wait for Next Trigger Event ⏱&lt;br&gt;(e.g., periodic interval, area entry/exit)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFCC;strokeColor=#FFD700;fontSize=10;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="430" y="510" width="280" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Second Report -->
+        <mxCell id="report2-label" value="Report #2 (Next Trigger)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=1;fontColor=#0066CC" vertex="1" parent="1">
+          <mxGeometry x="70" y="560" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="msg10-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#0066CC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="585" as="sourcePoint" />
+            <mxPoint x="380" y="585" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg10-label" value="SUPL TRIGGERED START" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg10-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg11-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#0066CC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="610" as="sourcePoint" />
+            <mxPoint x="620" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg11-label" value="SUPL REPORT (Position)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg11-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg12-arrow" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#009900;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="635" as="sourcePoint" />
+            <mxPoint x="140" y="635" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg12-label" value="MLP SLIA (Location)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=8;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg12-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="-5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Session Termination -->
+        <mxCell id="term-label" value="SESSION TERMINATION" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE6E6;strokeColor=#CC0000;fontStyle=1;fontSize=11" vertex="1" parent="1">
+          <mxGeometry x="950" y="685" width="150" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="msg13-arrow" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#CC0000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="700" as="sourcePoint" />
+            <mxPoint x="380" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg13-label" value="MLP SLI Stop (Optional)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg13-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg14-arrow" value="" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#CC0000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="380" y="730" as="sourcePoint" />
+            <mxPoint x="620" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="msg14-label" value="SUPL END (Session Termination)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;fontStyle=1;fillColor=#ffffff;" vertex="1" connectable="0" parent="msg14-arrow">
+          <mxGeometry x="-0.1" y="2" relative="1" as="geometry">
+            <mxPoint x="5" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Trigger Types Info Box -->
+        <mxCell id="triggers-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0F0FF;strokeColor=#6666CC;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="850" width="410" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="triggers-title" value="Trigger Types in SUPL 2.0:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="70" y="860" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="trigger1" value="1. Periodic: Reports at fixed intervals (e.g., every 30 seconds)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="80" y="890" width="380" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="trigger2" value="2. Area Event: Reports when entering/leaving geographic area" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="80" y="910" width="380" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="trigger3" value="3. Start Time: Begin periodic reporting at specified time" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="80" y="930" width="380" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="trigger4" value="4. Stop Time: Maximum duration for triggered session" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="80" y="950" width="380" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="trigger5" value="5. Historic Reporting: Report buffered locations if offline" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="80" y="970" width="380" height="15" as="geometry" />
+        </mxCell>
+
+        <!-- Use Cases Box -->
+        <mxCell id="usecases-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF0F0;strokeColor=#CC6666;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="510" y="850" width="410" height="140" as="geometry" />
+        </mxCell>
+
+        <mxCell id="usecases-title" value="Common Use Cases:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="520" y="860" width="200" height="20" as="geometry" />
+        </mxCell>
+
+        <mxCell id="usecase1" value="• Fleet Management: Track vehicles every 5 minutes" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="530" y="890" width="380" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="usecase2" value="• Geo-Fencing: Alert when device enters/exits specific area" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="530" y="910" width="380" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="usecase3" value="• Asset Tracking: Periodic location updates for shipments" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="530" y="930" width="380" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="usecase4" value="• Child Safety: Parent gets updates on child's location" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="530" y="950" width="380" height="15" as="geometry" />
+        </mxCell>
+
+        <mxCell id="usecase5" value="• Emergency Services: Continuous location during emergency" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10" vertex="1" parent="1">
+          <mxGeometry x="530" y="970" width="380" height="15" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
