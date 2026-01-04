@@ -1,0 +1,177 @@
+<mxfile host="app.diagrams.net" modified="2026-01-03T00:00:00.000Z" agent="Claude" version="22.0.0">
+  <diagram name="AOSP Architecture" id="aosp-arch">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Android AOSP Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="400" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Application Layer -->
+        <mxCell id="app-layer" value="Application Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="1000" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="app-phone" value="Phone App&#xa;(Dialer)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="100" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="app-msg" value="Messaging&#xa;App" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="260" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="app-settings" value="Settings&#xa;App" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="420" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="app-third" value="Third-Party&#xa;Apps" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="580" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="app-browser" value="Browser" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="740" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="app-contacts" value="Contacts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="900" y="120" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Application Framework Layer -->
+        <mxCell id="framework-layer" value="Application Framework" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="1000" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="fw-tel" value="Telephony&#xa;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="100" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fw-activity" value="Activity&#xa;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="240" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fw-conn" value="Connectivity&#xa;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="380" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fw-pkg" value="Package&#xa;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="520" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fw-res" value="Resource&#xa;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="660" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fw-notif" value="Notification&#xa;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="800" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fw-telecom" value="Telecom&#xa;Framework" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="940" y="240" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- System Services Layer -->
+        <mxCell id="services-layer" value="System Services &amp; Native Libraries" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="340" width="1000" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-phone" value="Phone&#xa;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="100" y="380" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-art" value="ART/Dalvik&#xa;Runtime" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="230" y="380" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-binder" value="Binder&#xa;IPC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="360" y="380" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-native" value="Native&#xa;Libraries" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="490" y="380" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-media" value="Media&#xa;Framework" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="620" y="380" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-surface" value="Surface&#xa;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="750" y="380" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-webkit" value="WebKit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="880" y="380" width="110" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- HAL Layer -->
+        <mxCell id="hal-layer" value="Hardware Abstraction Layer (HAL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="480" width="1000" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-radio" value="Radio HAL&#xa;(HIDL/AIDL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="100" y="520" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-audio" value="Audio&#xa;HAL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="250" y="520" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-camera" value="Camera&#xa;HAL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="400" y="520" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-sensors" value="Sensors&#xa;HAL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="550" y="520" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-gps" value="GPS&#xa;HAL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="700" y="520" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-graphics" value="Graphics&#xa;HAL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="850" y="520" width="130" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Linux Kernel Layer -->
+        <mxCell id="kernel-layer" value="Linux Kernel" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="600" width="1000" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="kern-ipc" value="IPC Router&#xa;/SMD Driver" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="100" y="640" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="kern-power" value="Power&#xa;Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="250" y="640" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="kern-mem" value="Memory&#xa;Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="400" y="640" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="kern-net" value="Network&#xa;Drivers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="550" y="640" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="kern-binder" value="Binder&#xa;Driver" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="700" y="640" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="kern-display" value="Display&#xa;Driver" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="850" y="640" width="130" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Hardware Layer -->
+        <mxCell id="hw-layer" value="Hardware" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="720" width="1000" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-soc" value="Qualcomm SoC&#xa;(Application Processor)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="100" y="755" width="180" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-modem" value="Modem Subsystem&#xa;(MSS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="300" y="755" width="180" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-mem" value="RAM/Storage" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="500" y="755" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-display" value="Display" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="660" y="755" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-sensors" value="Sensors" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="820" y="755" width="120" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-rf" value="RF Front-End" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="960" y="755" width="100" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Arrows -->
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1" source="app-layer" target="framework-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1" source="framework-layer" target="services-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;" edge="1" parent="1" source="services-layer" target="hal-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#e1d5e7;strokeColor=#9673a6;" edge="1" parent="1" source="hal-layer" target="kernel-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arrow5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeWidth=2;fillColor=#b1ddf0;strokeColor=#10739e;" edge="1" parent="1" source="kernel-layer" target="hw-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

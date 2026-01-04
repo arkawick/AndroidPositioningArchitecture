@@ -1,0 +1,361 @@
+<mxfile host="app.diagrams.net" modified="2026-01-03T00:00:00.000Z" agent="Claude" version="22.0.0">
+  <diagram name="Location Architecture" id="location-arch">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Android Location &amp; GNSS Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="10" width="600" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Application Layer -->
+        <mxCell id="app-layer" value="Application Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="app-maps" value="Maps/&#xa;Navigation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="app-weather" value="Weather" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="220" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="app-fitness" value="Fitness&#xa;Tracker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="360" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="app-camera" value="Camera&#xa;(Geotagging)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="500" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="app-social" value="Social&#xa;Media" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="640" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="app-emergency" value="Emergency&#xa;SOS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="780" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="app-rideshare" value="Ride Share" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="920" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="app-delivery" value="Delivery&#xa;Apps" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="app-ar" value="AR Apps" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="100" width="120" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Location APIs -->
+        <mxCell id="api-layer" value="Location APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="170" width="1320" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="api-fusedloc" value="FusedLocation&#xa;Provider" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="210" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api-locmgr" value="LocationManager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="260" y="210" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api-geocoder" value="Geocoder&#xa;(Address)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="440" y="210" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api-geofence" value="Geofencing&#xa;API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="620" y="210" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api-activity" value="Activity&#xa;Recognition" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="800" y="210" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api-places" value="Places&#xa;API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="980" y="210" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api-gnss-meas" value="GNSS&#xa;Measurements" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="210" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Location Service -->
+        <mxCell id="service-layer" value="Location Service (system_server)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="290" width="1320" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-locmgrsvc" value="LocationManager&#xa;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="330" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-gnssprov" value="GnssLocation&#xa;Provider" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="330" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-netprov" value="NetworkLocation&#xa;Provider" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="400" y="330" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-passive" value="Passive&#xa;Provider" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="560" y="330" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-gnss-meas" value="GnssMeasure&#xa;Provider" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="720" y="330" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-gnss-nav" value="GnssNavigation&#xa;Message" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="880" y="330" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-geofence" value="Geofence&#xa;Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="330" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="srv-country" value="CountryDetector&#xa;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="330" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- JNI Layer -->
+        <mxCell id="jni-layer" value="JNI (Native Interface)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="430" width="1320" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="jni-gnss" value="android_location_GnssLocationProvider.cpp" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=2" vertex="1" parent="1">
+          <mxGeometry x="240" y="440" width="280" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- GNSS HAL -->
+        <mxCell id="hal-layer" value="GNSS HAL (HIDL/AIDL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="490" width="1320" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-ignss" value="IGnss" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="530" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-ignss-cb" value="IGnssCallback" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="230" y="530" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-ignss-meas" value="IGnssMeasure&#xa;ment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="380" y="530" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-ignss-conf" value="IGnssConfig&#xa;uration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="530" y="530" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-ignss-geo" value="IGnssGeo&#xa;fencing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="680" y="530" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-ignss-batch" value="IGnssBatching" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="830" y="530" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-ignss-debug" value="IGnssDebug" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="980" y="530" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-ignss-ant" value="IGnssAntenna&#xa;Info" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="530" width="130" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Vendor GNSS HAL -->
+        <mxCell id="vendor-hal-layer" value="Vendor GNSS HAL Implementation (Qualcomm)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="610" width="1320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="vendor-gnss-cpp" value="Gnss.cpp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="645" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="vendor-agnss" value="AGnss.cpp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="240" y="645" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="vendor-meas" value="GnssMeasure&#xa;ment.cpp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="400" y="645" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="vendor-geofence" value="GnssGeofencing&#xa;.cpp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="560" y="645" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="vendor-batch" value="GnssBatching.cpp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="720" y="645" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="vendor-conf" value="GnssConfig&#xa;uration.cpp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="880" y="645" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="vendor-debug" value="GnssDebug.cpp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="645" width="140" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- Location API -->
+        <mxCell id="loc-api-layer" value="Location Integration API (Qualcomm)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="710" width="1320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="loc-api-client" value="LocationAPI&#xa;ClientBase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="745" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="loc-api-adapter" value="GnssAdapter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="250" y="745" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="loc-api-loc" value="LocationAPI" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="420" y="745" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="loc-api-ipc" value="LocIPC" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="590" y="745" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="loc-api-context" value="LocContext" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="760" y="745" width="150" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="loc-api-msg" value="MsgTask" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="930" y="745" width="150" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- GNSS Daemon -->
+        <mxCell id="daemon-layer" value="GNSS Daemon Process" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="810" width="640" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="daemon-service" value="gnss@2.1-service&#xa;(Qualcomm)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffd699;strokeColor=#cc8800;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="840" width="250" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="daemon-loc-hal" value="location_hal_daemon" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffd699;strokeColor=#cc8800;" vertex="1" parent="1">
+          <mxGeometry x="360" y="840" width="250" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- GNSS Engine -->
+        <mxCell id="engine-layer" value="GNSS Engine (Qualcomm Proprietary)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="700" y="810" width="660" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="engine-pe" value="Position&#xa;Engine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="740" y="840" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="engine-me" value="Measurement&#xa;Engine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="880" y="840" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="engine-cp" value="Control&#xa;Plane" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="840" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="engine-dr" value="Dead&#xa;Reckoning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="840" width="120" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- GNSS Chipset Hardware -->
+        <mxCell id="hw-layer" value="GNSS Chipset Hardware" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontSize=16;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="900" width="1320" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-rf" value="RF Frontend&#xa;(Multi-band)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="935" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-bb" value="Baseband&#xa;Processor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="935" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-acq" value="Acquisition&#xa;Engine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="400" y="935" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-track" value="Tracking&#xa;Channels (32+)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="560" y="935" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-corr" value="Correlators&#xa;(DLL/PLL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="720" y="935" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-dsp" value="GNSS DSP&#xa;(Hexagon)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="880" y="935" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-lna" value="LNA (Low&#xa;Noise Amp)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="935" width="140" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-antenna" value="GNSS&#xa;Antenna" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="1200" y="935" width="140" height="35" as="geometry" />
+        </mxCell>
+
+        <!-- External Systems -->
+        <mxCell id="external-title" value="External Assistance Systems" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="300" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-supl" value="SUPL Server&#xa;(A-GNSS)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="320" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-xtra" value="XTRA Server&#xa;(Ephemeris)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="400" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-ntp" value="NTP Server&#xa;(Time)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="480" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-psds" value="PSDS&#xa;(Google)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="560" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-cell" value="Cell Towers&#xa;(Network Loc)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="640" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ext-wifi" value="WiFi APs&#xa;(Network Loc)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1420" y="720" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Satellites -->
+        <mxCell id="satellites" value="GNSS Satellites&#xa;(GPS, GLONASS, Galileo, BeiDou, QZSS, NavIC)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=14;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1420" y="850" width="220" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- Communication Arrows -->
+        <mxCell id="arr1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="app-layer" target="api-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="api-layer" target="service-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="service-layer" target="hal-layer">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="410" as="sourcePoint" />
+            <mxPoint x="700" y="490" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#82b366;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hal-layer" target="vendor-hal-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#cc0000;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="vendor-hal-layer" target="loc-api-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#10739e;endArrow=classic;startArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="loc-api-layer" target="daemon-layer">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="800" />
+              <mxPoint x="200" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr6-lbl" value="IPC" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#0000cc;fontStyle=1" vertex="1" connectable="0" parent="arr6">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="170" y="-9" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9673a6;endArrow=classic;startArrow=classic;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="daemon-layer" target="engine-layer">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="880" as="sourcePoint" />
+            <mxPoint x="865" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#cc0000;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="engine-layer" target="hw-layer">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- External connections -->
+        <mxCell id="arr-supl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#d6b656;endArrow=classic;startArrow=classic;dashed=1;dashPattern=8 8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="srv-gnssprov" target="ext-supl">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-xtra" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#d6b656;endArrow=classic;startArrow=classic;dashed=1;dashPattern=8 8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="vendor-gnss-cpp" target="ext-xtra">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1380" y="663" />
+              <mxPoint x="1380" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr-ntp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#d6b656;endArrow=classic;startArrow=classic;dashed=1;dashPattern=8 8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="loc-api-adapter" target="ext-ntp">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1400" y="763" />
+              <mxPoint x="1400" y="510" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr-cell" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#82b366;endArrow=classic;startArrow=classic;dashed=1;dashPattern=8 8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="srv-netprov" target="ext-cell">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1390" y="360" />
+              <mxPoint x="1390" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr-wifi" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;strokeColor=#82b366;endArrow=classic;startArrow=classic;dashed=1;dashPattern=8 8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="srv-netprov" target="ext-wifi">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1390" y="360" />
+              <mxPoint x="1390" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr-sat" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#6c8ebf;endArrow=classic;startArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="hw-antenna" target="satellites">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr-sat-lbl" value="L1/L5 Signals&#xa;1575.42 MHz" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#0000cc;fontStyle=1" vertex="1" connectable="0" parent="arr-sat">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="5" y="-18" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

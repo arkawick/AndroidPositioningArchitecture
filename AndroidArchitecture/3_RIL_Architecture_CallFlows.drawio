@@ -1,0 +1,323 @@
+<mxfile host="app.diagrams.net" modified="2026-01-03T00:00:00.000Z" agent="Claude" version="22.0.0">
+  <diagram name="RIL Call Flows" id="ril-callflows">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="RIL Architecture &amp; Call Flow Diagrams" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="500" y="10" width="600" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Left Section: Outgoing Call Flow -->
+        <mxCell id="section1-title" value="1. Outgoing Voice Call Flow (Solicited Request)" style="text;html=1;strokeColor=#d6b656;fillColor=#fff2cc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="60" width="720" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Outgoing Call Flow Layers -->
+        <mxCell id="out-app" value="Phone App&#xa;(Dialer UI)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="out-telecom" value="Telecom&#xa;Framework" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="out-tel-conn" value="TelephonyConnection&#xa;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="280" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="out-phone" value="GsmCdmaPhone&#xa;.dial()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="360" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="out-tracker" value="GsmCdmaCall&#xa;Tracker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="80" y="440" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="out-rilj" value="RILJ&#xa;RIL_REQUEST_DIAL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="520" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="out-hal" value="Radio HAL&#xa;IRadio.dial()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="600" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="out-vendor" value="Vendor RIL&#xa;(QCRIL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="680" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="out-qmi" value="QMI_VOICE&#xa;DIAL_CALL_REQ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="760" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="out-modem" value="Modem&#xa;Processor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="840" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Outgoing Call Flow Arrows -->
+        <mxCell id="out-arr1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;endArrow=classic;" edge="1" parent="1" source="out-app" target="out-telecom">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out-arr2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;endArrow=classic;" edge="1" parent="1" source="out-telecom" target="out-tel-conn">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out-arr3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;endArrow=classic;" edge="1" parent="1" source="out-tel-conn" target="out-phone">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out-arr4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;endArrow=classic;" edge="1" parent="1" source="out-phone" target="out-tracker">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out-arr5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;endArrow=classic;" edge="1" parent="1" source="out-tracker" target="out-rilj">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out-arr6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#82b366;endArrow=classic;" edge="1" parent="1" source="out-rilj" target="out-hal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out-arr7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#cc0000;endArrow=classic;" edge="1" parent="1" source="out-hal" target="out-vendor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out-arr8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#10739e;endArrow=classic;" edge="1" parent="1" source="out-vendor" target="out-qmi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="out-arr9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d79b00;endArrow=classic;" edge="1" parent="1" source="out-qmi" target="out-modem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Response Flow -->
+        <mxCell id="out-resp-label" value="Response Flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#cc0000;" vertex="1" parent="1">
+          <mxGeometry x="260" y="740" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="out-resp-arr" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#cc0000;endArrow=classic;dashed=1;dashPattern=8 8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="out-modem" target="out-app">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="870" as="sourcePoint" />
+            <mxPoint x="220" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="280" y="870" />
+              <mxPoint x="280" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="out-resp-label2" value="dialResponse()&#xa;Callback Chain" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#cc0000;fontStyle=1" vertex="1" connectable="0" parent="out-resp-arr">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="20" y="-280" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Outgoing Call Details -->
+        <mxCell id="out-details" value="Steps:&#xa;1. User enters number, presses dial&#xa;2. Telecom validates and routes&#xa;3. Connection service created&#xa;4. Phone object initiates call&#xa;5. Call tracker manages state&#xa;6. RILJ sends request to HAL&#xa;7. HAL forwards to vendor RIL&#xa;8. Vendor RIL creates QMI msg&#xa;9. QMI message sent to modem&#xa;10. Modem initiates call setup&#xa;11. Response flows back&#xa;12. UI updated with call state" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="400" y="120" width="340" height="220" as="geometry" />
+        </mxCell>
+
+        <!-- QMI Message Format -->
+        <mxCell id="qmi-format" value="QMI Message Structure:&#xa;&#xa;Header:&#xa;- Service ID: 0x09 (VOICE)&#xa;- Message ID: 0x0020 (DIAL)&#xa;- Transaction ID: 0x0001&#xa;&#xa;TLV (Type-Length-Value):&#xa;- 0x01: Calling Number&#xa;  - Length: variable&#xa;  - Value: phone number&#xa;- 0x10: Call Type&#xa;  - Length: 1&#xa;  - Value: 0x00 (voice)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;fontSize=10;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="400" y="360" width="340" height="220" as="geometry" />
+        </mxCell>
+
+        <!-- Right Section: Incoming Call Flow -->
+        <mxCell id="section2-title" value="2. Incoming Call Flow (Unsolicited Indication)" style="text;html=1;strokeColor=#9673a6;fillColor=#e1d5e7;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="800" y="60" width="720" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Incoming Call Flow -->
+        <mxCell id="in-network" value="Network&#xa;(Incoming Call)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="840" y="120" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="in-modem" value="Modem&#xa;Processor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="840" y="200" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="in-qmi-ind" value="QMI_VOICE&#xa;CALL_STATUS_IND" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="840" y="280" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="in-vendor" value="Vendor RIL&#xa;(QCRIL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="840" y="360" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="in-hal-ind" value="Radio HAL&#xa;IRadioIndication&#xa;.callStateChanged()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="840" y="440" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="in-rilj-ind" value="RILJ&#xa;processIndication()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="840" y="530" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="in-phone-ind" value="GsmCdmaPhone&#xa;.notifyNewRinging&#xa;Connection()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="840" y="610" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="in-tel-reg" value="TelephonyRegistry&#xa;.notifyCallState()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="840" y="700" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="in-phoneapp" value="PhoneApp&#xa;receives Intent" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="840" y="780" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="in-incallui" value="InCallUI&#xa;shows incoming&#xa;call screen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="840" y="860" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Incoming Call Arrows -->
+        <mxCell id="in-arr1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;endArrow=classic;" edge="1" parent="1" source="in-network" target="in-modem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="in-arr2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d79b00;endArrow=classic;" edge="1" parent="1" source="in-modem" target="in-qmi-ind">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="in-arr3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#10739e;endArrow=classic;" edge="1" parent="1" source="in-qmi-ind" target="in-vendor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="in-arr4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#cc0000;endArrow=classic;" edge="1" parent="1" source="in-vendor" target="in-hal-ind">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="in-arr5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#82b366;endArrow=classic;" edge="1" parent="1" source="in-hal-ind" target="in-rilj-ind">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="in-arr6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;endArrow=classic;" edge="1" parent="1" source="in-rilj-ind" target="in-phone-ind">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="in-arr7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;endArrow=classic;" edge="1" parent="1" source="in-phone-ind" target="in-tel-reg">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="in-arr8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;endArrow=classic;" edge="1" parent="1" source="in-tel-reg" target="in-phoneapp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="in-arr9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;endArrow=classic;" edge="1" parent="1" source="in-phoneapp" target="in-incallui">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Query Flow -->
+        <mxCell id="in-query-label" value="Query for Details" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#0000cc;" vertex="1" parent="1">
+          <mxGeometry x="1020" y="550" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="in-query-arr" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#0000cc;endArrow=classic;startArrow=classic;dashed=1;dashPattern=8 8;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="in-rilj-ind" target="in-modem">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="980" y="560" as="sourcePoint" />
+            <mxPoint x="980" y="230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1040" y="560" />
+              <mxPoint x="1040" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="in-query-label2" value="RIL_REQUEST&#xa;_GET_CURRENT&#xa;_CALLS" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#0000cc;fontStyle=1" vertex="1" connectable="0" parent="in-query-arr">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="25" y="-120" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Incoming Call Details -->
+        <mxCell id="in-details" value="Unsolicited Indication Flow:&#xa;&#xa;1. Network pages device&#xa;2. Modem receives setup msg&#xa;3. Modem sends QMI indication&#xa;4. Vendor RIL processes ind&#xa;5. HAL triggers indication callback&#xa;6. RILJ receives notification&#xa;7. RILJ queries for call details&#xa;8. Phone object creates connection&#xa;9. TelephonyRegistry broadcasts&#xa;10. PhoneApp receives broadcast&#xa;11. InCallUI shows incoming call&#xa;12. User can answer/reject" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="120" width="340" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- QMI Indication Format -->
+        <mxCell id="qmi-ind-format" value="QMI Indication Structure:&#xa;&#xa;Header:&#xa;- Service ID: 0x09 (VOICE)&#xa;- Message ID: 0x002E (IND)&#xa;- Transaction ID: N/A&#xa;&#xa;TLV:&#xa;- 0x01: Call Info Array&#xa;  - Call ID: 0x01&#xa;  - State: INCOMING (0x04)&#xa;  - Direction: MT (0x02)&#xa;  - Number: caller number&#xa;- 0x10: Remote Party Number&#xa;- 0x11: Remote Party Name" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;fontSize=10;fontFamily=Courier New;" vertex="1" parent="1">
+          <mxGeometry x="1160" y="380" width="340" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Bottom Section: Data Connection Flow -->
+        <mxCell id="section3-title" value="3. Data Connection Setup Flow" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="960" width="1480" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Data Flow Components -->
+        <mxCell id="data-conn" value="Connectivity&#xa;Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="1020" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="data-tracker" value="DcTracker" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="240" y="1020" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="data-sm" value="DataConnection&#xa;State Machine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="400" y="1020" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="data-rilj" value="RILJ&#xa;setupDataCall()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="560" y="1020" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="data-hal" value="Radio HAL&#xa;(Data)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="720" y="1020" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="data-qmi" value="QMI_WDS&#xa;START_NET_REQ" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="880" y="1020" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="data-modem" value="Modem&#xa;(PDN Setup)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1040" y="1020" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="data-netif" value="Network Interface&#xa;(rmnet_data0)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1200" y="1020" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="data-ipa" value="IPA&#xa;(Packet Accel)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1380" y="1020" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Data Flow Arrows -->
+        <mxCell id="data-arr1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;endArrow=classic;" edge="1" parent="1" source="data-conn" target="data-tracker">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="data-arr1-lbl" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#cc0000;fontStyle=1" vertex="1" connectable="0" parent="data-arr1">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data-arr2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;endArrow=classic;" edge="1" parent="1" source="data-tracker" target="data-sm">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="data-arr2-lbl" value="2" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#cc0000;fontStyle=1" vertex="1" connectable="0" parent="data-arr2">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data-arr3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;endArrow=classic;" edge="1" parent="1" source="data-sm" target="data-rilj">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="data-arr3-lbl" value="3" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#cc0000;fontStyle=1" vertex="1" connectable="0" parent="data-arr3">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data-arr4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;endArrow=classic;" edge="1" parent="1" source="data-rilj" target="data-hal">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="data-arr4-lbl" value="4" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#cc0000;fontStyle=1" vertex="1" connectable="0" parent="data-arr4">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data-arr5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#82b366;endArrow=classic;" edge="1" parent="1" source="data-hal" target="data-qmi">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="data-arr5-lbl" value="5" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#cc0000;fontStyle=1" vertex="1" connectable="0" parent="data-arr5">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data-arr6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#10739e;endArrow=classic;" edge="1" parent="1" source="data-qmi" target="data-modem">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="data-arr6-lbl" value="6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#cc0000;fontStyle=1" vertex="1" connectable="0" parent="data-arr6">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data-arr7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d79b00;endArrow=classic;" edge="1" parent="1" source="data-modem" target="data-netif">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="data-arr7-lbl" value="7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#cc0000;fontStyle=1" vertex="1" connectable="0" parent="data-arr7">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="data-arr8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9673a6;endArrow=classic;" edge="1" parent="1" source="data-netif" target="data-ipa">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="data-arr8-lbl" value="8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;fontColor=#cc0000;fontStyle=1" vertex="1" connectable="0" parent="data-arr8">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Data Flow Description -->
+        <mxCell id="data-desc" value="Data Connection Parameters Returned:&#xa;&#xa;1. IP Address (IPv4/IPv6)&#xa;2. DNS Servers (Primary/Secondary)&#xa;3. MTU (Maximum Transmission Unit)&#xa;4. Gateway Address&#xa;5. PDN Type (IPv4, IPv6, IPv4v6)&#xa;6. Data Call Handle&#xa;7. Interface Name (rmnet_data0)&#xa;&#xa;Network Interface Configuration:&#xa;- Interface brought up with IP&#xa;- Routing tables updated&#xa;- DNS configured in system&#xa;- Apps can now use data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="80" y="1110" width="420" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- RmNet/IPA Details -->
+        <mxCell id="rmnet-desc" value="RmNet Data Path:&#xa;&#xa;- RmNet: Qualcomm multiplexing driver&#xa;- Supports multiple virtual interfaces&#xa;- MAP (Multiplexing and Aggregation Protocol)&#xa;- QoS flow management&#xa;&#xa;IPA (Integrated Packet Accelerator):&#xa;- Hardware offload engine&#xa;- Bypasses CPU for data packets&#xa;- Direct memory access (DMA)&#xa;- Reduces power consumption&#xa;- Improves throughput&#xa;&#xa;Data Flow: App → Socket → TCP/IP →&#xa;rmnet → IPA → Modem → Network" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="540" y="1110" width="420" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- QMI Services Summary -->
+        <mxCell id="qmi-services" value="Key QMI Services:&#xa;&#xa;QMI_VOICE (0x09):&#xa;- Call control (dial, answer, hangup)&#xa;- DTMF, call waiting, call forwarding&#xa;&#xa;QMI_NAS (0x03):&#xa;- Network registration&#xa;- Signal strength, cell info&#xa;- Network scan, selection&#xa;&#xa;QMI_WDS (0x01):&#xa;- Data connection setup/teardown&#xa;- Packet statistics&#xa;- QoS management&#xa;&#xa;QMI_UIM (0x0B):&#xa;- SIM card operations&#xa;- APDU exchange&#xa;&#xa;QMI_IMS (0x12):&#xa;- VoLTE, Video calls&#xa;- IMS registration" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;align=left;verticalAlign=top;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="1110" width="520" height="240" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

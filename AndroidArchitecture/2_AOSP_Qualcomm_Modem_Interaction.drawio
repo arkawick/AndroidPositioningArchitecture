@@ -1,0 +1,330 @@
+<mxfile host="app.diagrams.net" modified="2026-01-03T00:00:00.000Z" agent="Claude" version="22.0.0">
+  <diagram name="AOSP-Qualcomm Modem" id="modem-interaction">
+    <mxGraphModel dx="1434" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="AOSP - Qualcomm Modem Interaction Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="700" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Left Side: Android Stack -->
+        <mxCell id="android-container" value="Application Processor (Android)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;verticalAlign=top;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="580" height="840" as="geometry" />
+        </mxCell>
+
+        <!-- Android Framework -->
+        <mxCell id="framework-box" value="Android Framework (Java)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="120" width="540" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="telmanager" value="TelephonyManager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="80" y="160" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phoneapp" value="PhoneApp&#xa;(System Service)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="250" y="160" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="connservice" value="ConnectivityService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="420" y="160" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- RILJ Layer -->
+        <mxCell id="rilj-box" value="RIL Java (RILJ)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="260" width="540" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="rilj" value="RIL.java" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="radioresponse" value="RadioResponse" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="230" y="300" width="130" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="radioindication" value="RadioIndication" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="380" y="300" width="130" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- HAL Interface -->
+        <mxCell id="hal-interface" value="HIDL/AIDL Interface" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;dashed=1;dashPattern=8 8;" vertex="1" parent="1">
+          <mxGeometry x="60" y="380" width="540" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Radio HAL -->
+        <mxCell id="hal-box" value="Radio HAL (C++)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="440" width="540" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="iradio" value="IRadio" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="480" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iradio-data" value="IRadio.data" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="200" y="480" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iradio-voice" value="IRadio.voice" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="320" y="480" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iradio-msg" value="IRadio.msg" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="440" y="480" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iradio-net" value="IRadio.network" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="80" y="540" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iradio-sim" value="IRadio.sim" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="200" y="540" width="100" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="iradio-config" value="IRadio.config" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="320" y="540" width="100" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Vendor RIL -->
+        <mxCell id="vendor-ril-box" value="Vendor RIL (Qualcomm)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="620" width="540" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="qcril" value="QCRIL-HAL" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="660" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qmi-client" value="QMI Client&#xa;Library" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="250" y="660" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qcril-modules" value="QCRIL Modules&#xa;(Voice/Data/NAS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="420" y="660" width="150" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- QMI Framework -->
+        <mxCell id="qmi-box" value="QMI Framework" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="740" width="540" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="qmi-voice" value="QMI_VOICE" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="80" y="770" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qmi-nas" value="QMI_NAS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="185" y="770" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qmi-wds" value="QMI_WDS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="290" y="770" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qmi-uim" value="QMI_UIM" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="395" y="770" width="90" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="qmi-ims" value="QMI_IMS" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="500" y="770" width="90" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Kernel Drivers -->
+        <mxCell id="kernel-box" value="Linux Kernel Drivers" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d4e1f5;strokeColor=#4d77cf;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="60" y="840" width="540" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ipc-router" value="IPC Router" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a9c4f5;strokeColor=#2e5cb8;" vertex="1" parent="1">
+          <mxGeometry x="80" y="870" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="smd-driver" value="SMD Driver" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a9c4f5;strokeColor=#2e5cb8;" vertex="1" parent="1">
+          <mxGeometry x="220" y="870" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rmnet" value="RmNet Driver" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a9c4f5;strokeColor=#2e5cb8;" vertex="1" parent="1">
+          <mxGeometry x="360" y="870" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="diag" value="DIAG Driver" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a9c4f5;strokeColor=#2e5cb8;" vertex="1" parent="1">
+          <mxGeometry x="500" y="870" width="90" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Right Side: Modem Subsystem -->
+        <mxCell id="modem-container" value="Modem Subsystem (MSS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;fontStyle=1;verticalAlign=top;align=left;" vertex="1" parent="1">
+          <mxGeometry x="660" y="80" width="680" height="840" as="geometry" />
+        </mxCell>
+
+        <!-- Modem QMI Services -->
+        <mxCell id="modem-qmi-box" value="QMI Services Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="680" y="120" width="640" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="m-qmi-voice" value="VOICE Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="700" y="160" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-qmi-nas" value="NAS Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="830" y="160" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-qmi-wds" value="WDS Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="960" y="160" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-qmi-uim" value="UIM Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="160" width="110" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="m-qmi-ims" value="IMS Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="160" width="80" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Protocol Stack -->
+        <mxCell id="protocol-box" value="Protocol Stack (AMSS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="680" y="240" width="640" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="rrc" value="RRC Layer&#xa;(Radio Resource Control)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="700" y="280" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nas-layer" value="NAS Layer&#xa;(Non-Access Stratum)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="900" y="280" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pdcp" value="PDCP&#xa;(Packet Data Convergence)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="280" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rlc" value="RLC Layer&#xa;(Radio Link Control)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="700" y="360" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mac" value="MAC Layer&#xa;(Medium Access Control)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="900" y="360" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="phy" value="PHY Layer&#xa;(Physical Layer)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="360" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- DSP & RF -->
+        <mxCell id="dsp-box" value="Digital Signal Processor (DSP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="680" y="460" width="640" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tx-dsp" value="TX Processing&#xa;(Encoding, Modulation)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="700" y="500" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rx-dsp" value="RX Processing&#xa;(Demodulation, Decoding)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="900" y="500" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="fft" value="FFT/IFFT&#xa;Engine" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="500" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- RF Frontend -->
+        <mxCell id="rf-box" value="RF Frontend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="680" y="600" width="640" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tx-rf" value="TX Chain&#xa;(PA, Filters)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="700" y="640" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rx-rf" value="RX Chain&#xa;(LNA, Filters)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="900" y="640" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="antenna" value="Antenna&#xa;Switch/Tuner" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="640" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Modem Processor -->
+        <mxCell id="modem-proc-box" value="Modem Processor (Hexagon)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="680" y="740" width="640" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="quart" value="QuRT RTOS&#xa;(Real-Time OS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="700" y="780" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mem-mgmt" value="Memory&#xa;Management" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="900" y="780" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="task-sched" value="Task Scheduler&#xa;&amp; Threading" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="780" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Antenna/Network -->
+        <mxCell id="network" value="Cellular Network (Tower)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="900" y="880" width="200" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Communication Arrows -->
+        <!-- Framework to RILJ -->
+        <mxCell id="arr1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fillColor=#fff2cc;strokeColor=#d6b656;endArrow=classic;startArrow=classic;" edge="1" parent="1" source="phoneapp" target="rilj">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr1-label" value="Solicited&#xa;Requests" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#cc6600;" vertex="1" connectable="0" parent="arr1">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="25" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- RILJ to HAL -->
+        <mxCell id="arr2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fillColor=#f8cecc;strokeColor=#b85450;endArrow=classic;startArrow=classic;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="rilj" target="hal-box">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr2-label" value="HIDL/AIDL&#xa;Binder IPC" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#990000;" vertex="1" connectable="0" parent="arr2">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="35" y="-5" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- HAL to Vendor RIL -->
+        <mxCell id="arr3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fillColor=#d5e8d4;strokeColor=#82b366;endArrow=classic;startArrow=classic;" edge="1" parent="1" source="iradio-voice" target="qcril">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr3-label" value="HAL&#xa;Interface" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#006600;" vertex="1" connectable="0" parent="arr3">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="25" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Vendor RIL to QMI -->
+        <mxCell id="arr4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fillColor=#ffcccc;strokeColor=#cc0000;endArrow=classic;startArrow=classic;" edge="1" parent="1" source="qmi-client" target="qmi-wds">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr4-label" value="QMI&#xa;Messages" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#cc0000;" vertex="1" connectable="0" parent="arr4">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="20" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- QMI to Kernel -->
+        <mxCell id="arr5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fillColor=#b1ddf0;strokeColor=#10739e;endArrow=classic;startArrow=classic;" edge="1" parent="1" source="qmi-nas" target="ipc-router">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Kernel to Modem QMI -->
+        <mxCell id="arr6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=4;fillColor=#d4e1f5;strokeColor=#4d77cf;endArrow=classic;startArrow=classic;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ipc-router" target="m-qmi-nas">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="600" y="885" as="sourcePoint" />
+            <mxPoint x="680" y="185" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="640" y="885" />
+              <mxPoint x="640" y="185" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr6-label" value="IPC Router / SMD&#xa;(Shared Memory)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#0000cc;fontStyle=1" vertex="1" connectable="0" parent="arr6">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="-10" y="-260" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Modem Internal -->
+        <mxCell id="arr7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fillColor=#b1ddf0;strokeColor=#10739e;endArrow=classic;" edge="1" parent="1" source="m-qmi-voice" target="rrc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fillColor=#d5e8d4;strokeColor=#82b366;endArrow=classic;" edge="1" parent="1" source="nas-layer" target="tx-dsp">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fillColor=#f8cecc;strokeColor=#b85450;endArrow=classic;" edge="1" parent="1" source="tx-dsp" target="tx-rf">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;fillColor=#ffcccc;strokeColor=#cc0000;endArrow=classic;startArrow=classic;" edge="1" parent="1" source="antenna" target="network">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr10-label" value="Radio Waves&#xa;(LTE/5G NR)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#cc0000;fontStyle=1" vertex="1" connectable="0" parent="arr10">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="35" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend" value="Legend" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;fontStyle=1;verticalAlign=top;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="940" width="600" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1" value="Android User Space" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="60" y="955" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" value="Vendor Code" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="180" y="955" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3" value="Kernel Space" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d4e1f5;strokeColor=#4d77cf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="280" y="955" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg4" value="Modem Firmware" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="380" y="955" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg5" value="Hardware" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="490" y="955" width="70" height="20" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

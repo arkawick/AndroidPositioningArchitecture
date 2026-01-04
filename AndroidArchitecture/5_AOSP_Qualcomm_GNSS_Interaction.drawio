@@ -1,0 +1,375 @@
+<mxfile host="app.diagrams.net" modified="2026-01-03T00:00:00.000Z" agent="Claude" version="22.0.0">
+  <diagram name="GNSS Interaction" id="gnss-interaction">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="AOSP - Qualcomm GNSS Detailed Interaction" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="400" y="10" width="800" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Left Side: Android/AOSP Stack -->
+        <mxCell id="android-container" value="Android Application Processor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1;verticalAlign=top;align=left;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="700" height="980" as="geometry" />
+        </mxCell>
+
+        <!-- Application -->
+        <mxCell id="app" value="Maps Application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="110" width="620" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- FusedLocationProvider -->
+        <mxCell id="fused" value="FusedLocationProvider API" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="180" width="620" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- LocationManagerService -->
+        <mxCell id="lms-box" value="LocationManagerService" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="250" width="620" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lms-check" value="Permission Check" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="100" y="290" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lms-select" value="Provider Selection" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="260" y="290" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lms-request" value="Request Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="420" y="290" width="140" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lms-callback" value="Callback Handler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="580" y="290" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- GnssLocationProvider -->
+        <mxCell id="gnss-prov-box" value="GnssLocationProvider" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="390" width="620" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="gp-native" value="GnssNative&#xa;(JNI Bridge)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gp-status" value="GnssStatus&#xa;Provider" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="240" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gp-meas" value="GnssMeasure&#xa;Provider" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="380" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gp-nav" value="GnssNavMsg&#xa;Provider" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;" vertex="1" parent="1">
+          <mxGeometry x="520" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- JNI -->
+        <mxCell id="jni-box" value="android_location_GnssLocationProvider.cpp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="80" y="540" width="620" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- GNSS HAL -->
+        <mxCell id="hal-box" value="GNSS HAL Interface (IGnss 2.1)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="610" width="620" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-start" value="start()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="100" y="650" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-stop" value="stop()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="220" y="650" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-setpos" value="setPosition&#xa;Mode()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="340" y="650" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-inject" value="injectTime()&#xa;injectLoc()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="460" y="650" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="hal-delete" value="deleteAiding&#xa;Data()" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="580" y="650" width="100" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Vendor GNSS HAL -->
+        <mxCell id="vendor-hal-box" value="Qualcomm GNSS HAL Implementation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="750" width="620" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="vh-gnss" value="Gnss.cpp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="790" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vh-agnss" value="AGnss.cpp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="230" y="790" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vh-meas" value="GnssMeas&#xa;urement.cpp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="360" y="790" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vh-config" value="GnssConfig.cpp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="490" y="790" width="110" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Location API -->
+        <mxCell id="loc-api-box" value="Location API Client" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="80" y="890" width="620" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="la-client" value="LocationAPI&#xa;ClientBase" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="100" y="930" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="la-adapter" value="GnssAdapter" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="260" y="930" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="la-ipc" value="LocIPC&#xa;(Socket Comm)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="420" y="930" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Right Side: GNSS Subsystem -->
+        <mxCell id="gnss-container" value="GNSS Subsystem (Qualcomm Proprietary)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=16;fontStyle=1;verticalAlign=top;align=left;" vertex="1" parent="1">
+          <mxGeometry x="780" y="70" width="780" height="980" as="geometry" />
+        </mxCell>
+
+        <!-- GNSS Daemon -->
+        <mxCell id="daemon-box" value="GNSS Daemon (gnss@2.1-service)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="820" y="110" width="700" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="daemon-loc-hal" value="location_hal_daemon" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="840" y="150" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="daemon-ipc-srv" value="IPC Server" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="150" width="200" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="daemon-msg" value="Message Router" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#bae1ff;strokeColor=#23445d;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="150" width="200" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Position Engine -->
+        <mxCell id="pe-box" value="Position Engine (PE)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="820" y="230" width="700" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="pe-kalman" value="Kalman Filter&#xa;- State prediction&#xa;- Measurement update&#xa;- Smoothing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;align=left;" vertex="1" parent="1">
+          <mxGeometry x="840" y="270" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pe-leastsq" value="Least Squares&#xa;- X, Y, Z, Clock Bias&#xa;- Iterative refinement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="270" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pe-sensor" value="Sensor Fusion&#xa;- IMU integration&#xa;- Barometer&#xa;- Dead Reckoning" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="270" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pe-correct" value="Corrections&#xa;- Ionospheric delay&#xa;- Tropospheric delay&#xa;- Clock error&#xa;- Relativistic effects" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;align=left;" vertex="1" parent="1">
+          <mxGeometry x="840" y="350" width="310" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="pe-output" value="Position Output&#xa;- Lat/Lon/Alt&#xa;- Accuracy&#xa;- Velocity&#xa;- Timestamp" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d0cee2;strokeColor=#56517e;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="350" width="310" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Measurement Engine -->
+        <mxCell id="me-box" value="Measurement Engine (ME)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="820" y="450" width="700" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="me-track" value="Satellite Tracking&#xa;- 32+ channels&#xa;- Multi-constellation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;align=left;" vertex="1" parent="1">
+          <mxGeometry x="840" y="490" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="me-pseudo" value="Pseudorange&#xa;- Code phase&#xa;- (Rx_Time - Tx_Time) × c" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="490" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="me-carrier" value="Carrier Phase&#xa;- Doppler shift&#xa;- PRR measurement" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="490" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="me-cn0" value="Signal Quality (C/N0)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="840" y="560" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="me-timing" value="Precise Timing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="560" width="200" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="me-ephemeris" value="Ephemeris Decode" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#c3e5c1;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="560" width="200" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Signal Processing -->
+        <mxCell id="sp-box" value="Signal Processing Layer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="820" y="630" width="700" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sp-acq" value="Acquisition&#xa;- PRN code search&#xa;- Doppler search&#xa;- -148 dBm sensitivity" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;" vertex="1" parent="1">
+          <mxGeometry x="840" y="670" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="sp-track" value="Tracking Loops&#xa;- DLL (code phase)&#xa;- PLL (carrier phase)&#xa;- FLL (frequency)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1060" y="670" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="sp-corr" value="Correlators&#xa;- Early/Prompt/Late&#xa;- Multi-tap" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=left;" vertex="1" parent="1">
+          <mxGeometry x="1280" y="670" width="200" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- GNSS Hardware -->
+        <mxCell id="hw-box" value="GNSS Chipset Hardware" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontSize=14;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="820" y="770" width="700" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-rf-box" value="RF Frontend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="840" y="810" width="310" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-lna" value="LNA&#xa;(Low Noise Amp)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="860" y="850" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-filter" value="SAW Filter&#xa;(Band Select)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="850" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-bb-box" value="Baseband Processor" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontStyle=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="810" width="310" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-mixer" value="Down Converter&#xa;(RF → IF)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="1190" y="850" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-adc" value="ADC&#xa;(Digitization)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="1330" y="850" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-dsp" value="GNSS DSP (Hexagon)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="840" y="930" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-antenna" value="GNSS Antenna&#xa;(Passive/Active)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1170" y="930" width="310" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="hw-channels" value="Tracking Channels&#xa;GPS: 24 | GLONASS: 8 | Galileo: 8 | BeiDou: 8" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffb3b3;strokeColor=#990000;" vertex="1" parent="1">
+          <mxGeometry x="840" y="990" width="640" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Satellites -->
+        <mxCell id="satellites" value="GNSS Satellites&#xa;(GPS, GLONASS, Galileo, BeiDou, QZSS, NavIC)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=16;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="1050" y="940" width="250" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Communication Arrows -->
+        <mxCell id="arr1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#6c8ebf;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="app" target="fused">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr1-lbl" value="Location Request" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#0000cc;" vertex="1" connectable="0" parent="arr1">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="40" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="arr2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="fused" target="lms-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="lms-box" target="gnss-prov-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9673a6;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gnss-prov-box" target="jni-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr4-lbl" value="JNI Call" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#660099;" vertex="1" connectable="0" parent="arr4">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="25" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="arr5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#10739e;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="jni-box" target="hal-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr5-lbl" value="HIDL/AIDL" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#006666;" vertex="1" connectable="0" parent="arr5">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="30" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="arr6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#82b366;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="hal-box" target="vendor-hal-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#cc0000;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="vendor-hal-box" target="loc-api-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Cross to GNSS Subsystem -->
+        <mxCell id="arr8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#d79b00;endArrow=classic;startArrow=classic;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="la-ipc" target="daemon-ipc-srv">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="750" y="960" />
+              <mxPoint x="750" y="175" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="arr8-lbl" value="Socket IPC&#xa;(Location API)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#cc6600;fontStyle=1" vertex="1" connectable="0" parent="arr8">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="-30" y="-270" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Internal GNSS subsystem -->
+        <mxCell id="arr9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#10739e;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="daemon-box" target="pe-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#9673a6;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="pe-box" target="me-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr10-lbl" value="Measurements" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;fontColor=#660099;" vertex="1" connectable="0" parent="arr10">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="35" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="arr11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#82b366;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="me-box" target="sp-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="arr12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#d6b656;endArrow=classic;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sp-box" target="hw-box">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Antenna to Satellite -->
+        <mxCell id="arr13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#6c8ebf;endArrow=classic;startArrow=classic;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;dashed=1;dashPattern=4 4;" edge="1" parent="1" source="hw-antenna" target="satellites">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="arr13-lbl" value="L1/L5 RF Signals&#xa;1575.42 MHz" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#0000cc;fontStyle=1" vertex="1" connectable="0" parent="arr13">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="45" y="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Callback Flow -->
+        <mxCell id="callback-arrow" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#cc0000;endArrow=classic;dashed=1;dashPattern=8 8;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="pe-box" target="gnss-prov-box">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="280" />
+              <mxPoint x="760" y="423" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="callback-lbl" value="Location Callback&#xa;gnssLocationCb()" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontColor=#cc0000;fontStyle=1" vertex="1" connectable="0" parent="callback-arrow">
+          <mxGeometry x="-0.2" y="1" relative="1" as="geometry">
+            <mxPoint x="30" y="-50" as="offset" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Legend -->
+        <mxCell id="legend-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="700" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-text" value="Data Flow Legend:" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="50" y="35" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-solid" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="45" as="sourcePoint" />
+            <mxPoint x="250" y="45" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg-solid-txt" value="Request Flow" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="260" y="35" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-dash" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#cc0000;dashed=1;dashPattern=8 8;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="45" as="sourcePoint" />
+            <mxPoint x="430" y="45" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg-dash-txt" value="Callback/Response" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="440" y="35" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg-rf" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#6c8ebf;dashed=1;dashPattern=4 4;startArrow=classic;startFill=1;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="570" y="45" as="sourcePoint" />
+            <mxPoint x="640" y="45" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg-rf-txt" value="RF Signals" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="35" width="70" height="20" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
